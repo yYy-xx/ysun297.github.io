@@ -1,0 +1,267 @@
+/* ---------- RESET / BASE ---------- */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --text: #050315;
+  --background: #F5E9D3;
+  --primary: #EED7B7;
+  --secondary: #8B5A2B;
+  --accent: #C19A6B;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+}
+
+/* Wrapper keeps page centered */
+#wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fffaf0;
+  box-shadow: 0 0 20px rgba(0,0,0,.05);
+}
+
+/* ---------- HEADER ---------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--primary);
+  border-bottom: 4px solid var(--secondary);
+}
+
+.logo-box {
+  border-radius: 12px;
+  border: 2px solid var(--secondary);
+  padding: .5rem .75rem;
+  background-color: #fffdf7;
+  display: inline-flex;
+  flex-direction: column;
+  gap: .15rem;
+}
+
+.logo-main {
+  font-weight: 700;
+  letter-spacing: .03em;
+}
+
+.tagline {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--secondary);
+}
+
+/* ---------- SEARCH + NAV ---------- */
+.top-bar {
+  padding: 1rem 2rem .5rem;
+}
+
+/* Search bar */
+.search-form {
+  display: flex;
+  gap: .5rem;
+  max-width: 420px;
+  margin: 0 auto 1rem;
+}
+
+.search-form input[type="search"] {
+  flex: 1;
+  padding: .5rem .75rem;
+  border-radius: 999px;
+  border: 1px solid #d3c4a9;
+}
+
+.search-form button {
+  padding: .5rem 1rem;
+  border-radius: 999px;
+  border: none;
+  background-color: var(--secondary);
+  color: white;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: #73441f;
+}
+
+/* Hide text for screen readers only */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Main navigation */
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--secondary);
+  padding-bottom: .25rem;
+  border-bottom: 2px solid transparent;
+}
+
+.main-nav a:hover,
+.main-nav a.current {
+  border-color: var(--accent);
+}
+
+/* ---------- LAYOUT ---------- */
+.layout {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 2rem 2rem;
+}
+
+/* Left column (main) */
+main {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Right column (aside) */
+.weekly {
+  flex: 1.4;
+  padding: 1rem;
+  background-color: #fff7e8;
+  border-radius: 12px;
+  border: 1px solid #ebd6b8;
+}
+
+.weekly h2 {
+  margin-top: 0;
+  color: var(--secondary);
+}
+
+/* Cards / sections */
+.card {
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  background-color: #fffdf8;
+  border: 1px solid #ecd4b5;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: var(--secondary);
+}
+
+.section-note {
+  font-size: .9rem;
+  color: #7a6a55;
+}
+
+/* Image placeholders */
+.image-box {
+  margin-top: .75rem;
+  border-radius: 12px;
+  background-color: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.image-feature {
+  min-height: 220px;
+}
+
+.image-new {
+  min-height: 180px;
+}
+
+.small-image {
+  min-height: 80px;
+}
+
+.weekly-item {
+  margin-bottom: 1rem;
+}
+
+.weekly-item h3 {
+  margin: 0 0 .5rem;
+  font-size: 1rem;
+  color: var(--secondary);
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+  margin-top: auto;
+  padding: 1.25rem 2rem 2rem;
+  border-top: 2px solid var(--primary);
+  background-color: #fffaf0;
+  font-size: .9rem;
+}
+
+.site-footer a {
+  color: var(--secondary);
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* bottom nav */
+.footer-nav ul {
+  margin: .75rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ---------- RESPONSIVE (small screens) ---------- */
+@media (max-width: 800px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+  }
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .weekly {
+    order: -1; /* show weekly topics above main on mobile */
+  }
+
+  .top-bar {
+    padding-inline: 1rem;
+  }
+
+  .layout {
+    padding-inline: 1rem;
+  }
+}
