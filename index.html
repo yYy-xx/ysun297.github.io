@@ -1,133 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Sweet Moments Bakery</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>Sweet Moments Bakery – Home</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
 <div id="wrapper">
-  <!-- HEADER ---------------------------------------------------->
-  <header class="site-header">
-    <div class="logo-area">
-      <!-- You can replace this div with an <img> later -->
-      <div class="logo-box">
-        <span class="logo-main">Sweet</span>
-        <span class="logo-main">Moments</span>
-        <span class="logo-main">Bakery</span>
-      </div>
-    </div>
 
-    <p class="tagline">Learn desserts step by step</p>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="logo-box">
+      <span class="logo-main">Sweet Moments Bakery</span>
+      <span class="tagline">Learn desserts step by step</span>
+    </div>
   </header>
 
-  <!-- SEARCH + NAV ---------------------------------------------->
+  <!-- SEARCH + NAV -->
   <div class="top-bar">
     <form class="search-form" action="#" method="get">
-      <label class="visually-hidden" for="search">Search recipes</label>
-      <input id="search" name="q" type="search" placeholder="Search recipes…" />
+      <label class="visually-hidden" for="site-search">Search recipes</label>
+      <input type="search" id="site-search" name="q" placeholder="Search recipes...">
       <button type="submit">Search</button>
     </form>
 
     <nav class="main-nav">
       <ul>
         <li><a href="index.html" class="current">Home</a></li>
-        <li><a href="#">Cakes</a></li>
-        <li><a href="#">Cookies</a></li>
-        <li><a href="#">Breads</a></li>
+        <li><a href="cakes.html">Cakes</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><a href="breads.html">Breads</a></li>
         <li><a href="#">Favorite / Me</a></li>
       </ul>
     </nav>
   </div>
 
-  <!-- MAIN LAYOUT: LEFT CONTENT + RIGHT WEEKLY TOPICS ----------->
+  <!-- MAIN LAYOUT -->
   <div class="layout">
+
+    <!-- LEFT COLUMN -->
     <main>
-      <!-- Feature / Highlights -->
-      <section class="card feature">
+      <!-- Bakery Highlights -->
+      <section class="card">
         <h2>Bakery Highlights</h2>
         <p class="section-note">This week’s most loved recipe.</p>
+
         <div class="image-box image-feature">
-          <!-- later: <img src="images/feature-cake.jpg" alt="Feature cake"> -->
-          <span>Featured image placeholder</span>
+          <img src="Rainbow Cake.jpg" alt="Rainbow celebration cake with strawberries on top">
         </div>
       </section>
 
-      <!-- New section -->
-      <section class="card new-section">
+      <!-- New This Week -->
+      <section class="card">
         <h2>New This Week</h2>
-        <p>Try our newest dessert tutorial! Replace this text with a short intro to your latest recipe or video.</p>
+        <p class="section-note">
+          Try our newest dessert tutorial! Replace this text with a short intro to your latest recipe or video.
+        </p>
+
         <div class="image-box image-new">
-          <span>New recipe image placeholder</span>
+          <img src="Fruit Tart.jpg" alt="Fruit tart topped with colorful fresh fruit">
         </div>
       </section>
     </main>
 
-    <!-- Right column: This week's hot topic --------------------->
+    <!-- RIGHT COLUMN -->
     <aside class="weekly">
       <h2>This Week’s Hot Topic</h2>
 
       <article class="weekly-item">
         <h3>Chocolate Drip Cake</h3>
         <div class="image-box small-image">
-          <span>Image 1</span>
+          <img src="Chocolate Drip Cake.jpg" alt="Tall chocolate drip cake with ganache">
         </div>
       </article>
 
       <article class="weekly-item">
         <h3>Matcha Swiss Roll</h3>
         <div class="image-box small-image">
-          <span>Image 2</span>
+          <img src="Matcha Swiss Roll.jpg" alt="Matcha roll cake with strawberries">
         </div>
       </article>
 
       <article class="weekly-item">
         <h3>Fruit Tart Basics</h3>
         <div class="image-box small-image">
-          <span>Image 3</span>
+          <img src="Fruit Tart.jpg" alt="Fruit tart with berries and kiwi slices">
         </div>
       </article>
 
       <article class="weekly-item">
         <h3>Beginner Bread Loaf</h3>
         <div class="image-box small-image">
-          <span>Image 4</span>
+          <img src="Beginner Bread Loaf.jpg" alt="Artisan bread loaf">
         </div>
       </article>
 
       <article class="weekly-item">
         <h3>Macaron Troubleshooting</h3>
         <div class="image-box small-image">
-          <span>Image 5</span>
+          <img src="Macaron.jpg" alt="Colorful macarons">
         </div>
       </article>
     </aside>
   </div>
 
-  <!-- FOOTER ---------------------------------------------------->
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <p>© 2025 Sweet Moments Bakery · Follow us on
-      <a href="#">Instagram</a>,
-      <a href="#">YouTube</a>,
-      <a href="#">TikTok</a>
+    <p>&copy; 2025 Sweet Moments Bakery · Follow us on
+      <a href="#">Instagram</a>, <a href="#">YouTube</a>, <a href="#">TikTok</a>.
     </p>
-
-    <!-- bottom navigation like in your wireframe -->
     <nav class="footer-nav">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Cakes</a></li>
-        <li><a href="#">Cookies</a></li>
-        <li><a href="#">Breads</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cakes.html">Cakes</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><a href="breads.html">Breads</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </footer>
 
-</div><!-- /wrapper -->
-
+</div>
 </body>
 </html>
