@@ -22,7 +22,7 @@ body {
   background-color: var(--background);
 }
 
-/* Wrapper keeps page centered */
+/* Wrapper */
 #wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -69,7 +69,6 @@ body {
   padding: 1rem 2rem .5rem;
 }
 
-/* Search bar */
 .search-form {
   display: flex;
   gap: .5rem;
@@ -97,7 +96,6 @@ body {
   background-color: #73441f;
 }
 
-/* Hide text for screen readers only */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -139,7 +137,6 @@ body {
   padding: 1rem 2rem 2rem;
 }
 
-/* Left column (main) */
 main {
   flex: 2;
   display: flex;
@@ -147,7 +144,6 @@ main {
   gap: 1.5rem;
 }
 
-/* Right column (aside) */
 .weekly {
   flex: 1.4;
   padding: 1rem;
@@ -161,7 +157,7 @@ main {
   color: var(--secondary);
 }
 
-/* Cards / sections */
+/* ---------- CARDS ---------- */
 .card {
   padding: 1rem 1.25rem;
   border-radius: 12px;
@@ -179,39 +175,43 @@ main {
   color: #7a6a55;
 }
 
-/* Image placeholders */
+/* ---------- IMAGE HANDLING (GLOBAL) ---------- */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Home Page Image Sizes */
 .image-box {
   margin-top: .75rem;
   border-radius: 12px;
+  overflow: hidden;
   background-color: var(--accent);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1.5rem;
 }
 
 .image-feature {
-  min-height: 220px;
+  max-height: 320px;
 }
 
 .image-new {
-  min-height: 180px;
+  max-height: 300px;
 }
 
 .small-image {
-  min-height: 80px;
+  max-height: 140px;
 }
 
-.weekly-item {
-  margin-bottom: 1rem;
-}
-
-.weekly-item h3 {
-  margin: 0 0 .5rem;
-  font-size: 1rem;
-  color: var(--secondary);
+/* Cakes & Breads page images */
+.recipe-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  margin: 1rem 0;
+  object-fit: cover;
+  display: block;
 }
 
 /* ---------- FOOTER ---------- */
@@ -231,7 +231,6 @@ main {
   text-decoration: underline;
 }
 
-/* bottom nav */
 .footer-nav ul {
   margin: .75rem 0 0;
   padding: 0;
@@ -241,7 +240,7 @@ main {
   gap: 1rem;
 }
 
-/* ---------- RESPONSIVE (small screens) ---------- */
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 800px) {
   .site-header {
     flex-direction: column;
@@ -254,14 +253,10 @@ main {
   }
 
   .weekly {
-    order: -1; /* show weekly topics above main on mobile */
+    order: -1;
   }
 
   .top-bar {
-    padding-inline: 1rem;
-  }
-
-  .layout {
     padding-inline: 1rem;
   }
 }
