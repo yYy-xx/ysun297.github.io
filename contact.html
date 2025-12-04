@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Sweet Moments Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Meta description -->
+  <meta name="description" content="Contact Sweet Moments Bakery for questions, feedback, or bakery recommendations.">
+</head>
+
+<body>
+<div id="wrapper">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="logo-box">
+      <span class="logo-main">Sweet Moments Bakery</span>
+      <span class="tagline">Making Every Bite Special</span>
+    </div>
+  </header>
+
+  <!-- SEARCH + NAV -->
+  <div class="top-bar">
+    <form class="search-form" action="#" method="get">
+      <label for="search" class="visually-hidden">Search recipes</label>
+      <input type="search" id="search" name="q" placeholder="Search recipes...">
+      <button type="submit">Search</button>
+    </form>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cakes.html">Cakes</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><a href="breads.html">Breads</a></li>
+        <li><a href="favorites.html">Favorite / Me</a></li>
+        <li><a href="contact.html" class="current">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="layout">
+    <section class="card" style="width:100%;">
+      <h1>Contact Me</h1>
+      <p>If you have questions, feedback, or just want to share your favorite dessert, feel free to reach out!
+         I'd love to hear from you.</p>
+
+      <!-- CONTACT FORM -->
+      <form class="contact-form" id="contact-form" action="#" method="post">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="topic">Reason for contacting:</label>
+        <select id="topic" name="topic" required>
+          <option value="">-- Select an option --</option>
+          <option value="feedback">Website Feedback</option>
+          <option value="recipe">Recipe Questions</option>
+          <option value="collab">Collaboration</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+
+      <p class="section-note">
+        You can also reach me at
+        <a href="#contact-form">ysun297@asu.edu</a> so I can reply after you submit the form.
+      </p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2025 Sweet Moments Bakery · Follow us on
+      <a href="#">Instagram</a>, <a href="#">YouTube</a>, <a href="#">TikTok</a>
+    </p>
+
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cakes.html">Cakes</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><a href="breads.html">Breads</a></li>
+        <li><a href="favorites.html">Favorite / Me</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</div>
+</body>
+</html>
